@@ -1,0 +1,21 @@
+  <div class="card-trip">
+  <% @produtos.each do |produto| %>
+    <% if produto.photo.attached? %>
+      <%= cl_image_tag produto.photo.key, crop: :fill,class:"img_preview" %>
+    <% else%>
+      <img src="<%=basket_array.sample%>" height="321" width="250">
+    <%end%>
+    <div class="card-trip-infos">
+      <div>
+       <h2><%= produto.nome %></h2>
+       <p>Descrição: <%= produto.tamanho %></p>
+       <p><a href="https://web.whatsapp.com/send?phone=5511984320432">Comprar</a>
+      </div>
+         <h2 class="card-trip-pricing">
+                <%= produto.valor %></h2>
+          <%= image_tag "ga.png", alt: "Le Wagon", class:"card-trip-user avatar-bordered"%>
+    </div>
+  <% end %>
+
+  </div>
+  <%= link_to "Início", root_path %>

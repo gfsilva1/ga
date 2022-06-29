@@ -1,0 +1,64 @@
+// Specific CSS for your home-page
+$bg: #706a6a;
+$text: #fff;
+
+body {
+  margin: 0;
+  height: calc(100vh - 20px);
+  font-size: 80px;
+  text-align: center;
+  background: $bg;
+  color: $text;
+  font-family: 'Pacifico', sans-serif;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  -webkit-font-smoothing: antialiased;
+  border: solid 10px #fff;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+sub,
+sup {
+  font-size: 22px;
+  opacity: 0.8;
+}
+
+sub {
+  font-size: 36px;
+  animation: flash 2s infinite;
+}
+
+a {
+  font-size: 36px;
+  animation: flash 2s infinite;
+  text-decoration: none;
+  color: $text;
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.5;
+  }
+}
+
+
+.avatar {
+  vertical-align: middle;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
