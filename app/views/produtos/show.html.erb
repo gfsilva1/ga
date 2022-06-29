@@ -1,7 +1,7 @@
 <div class="card-category">
-    <%= cl_image_tag @produto.photo.key, height: 351, width: 400, crop: :fill %>
+    <%= cl_image_tag @produto.photo.key, height: 100, width: 200, crop: :fill %>
     <h1><%= @produto.nome %></h1>
-    <h2>Descrição:<%= @produto.cor %>,<%= @produto.tamanho %>
+    <h2>Descrição:<%= @produto.cor %>,<%= @produto.descricao %>
     <h2>Preço:R$<%= @produto.valor %></h2>
 
 
